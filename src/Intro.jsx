@@ -1,3 +1,6 @@
+import Button from "@mui/material/Button";
+import EmailIcon from "@mui/icons-material/Email";
+
 const Intro = () => {
   return (
     <section
@@ -12,16 +15,14 @@ const Intro = () => {
         <h2 className="text-textMain text-2xl md:text-4xl mt-2">
           I build things for the web.
         </h2>
-        <p className="text-textMain mt-4 max-w-lg mx-auto">
+        <p className="text-textMain my-4 max-w-lg mx-auto">
           I’m a software engineer specializing in building exceptional digital
           experiences.
         </p>
-        <a
-          href="#contact"
-          className="mt-8 inline-block bg-primary text-darkBg px-6 py-3 rounded-md hover:bg-opacity-80"
-        >
+
+        <Button href="#contact" startIcon={<EmailIcon />}>
           Get In Touch
-        </a>
+        </Button>
       </div>
     </section>
   );

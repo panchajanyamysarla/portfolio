@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import "./App.css";
 
 import { useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -9,7 +8,6 @@ import Intro from "./Intro";
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
-import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 
 const DARK_THEME = "dark";
@@ -47,7 +45,6 @@ const App = () => {
           <Work />
           <Contact />
         </main>
-        <Footer />
       </div>
     </ThemeProvider>
   );

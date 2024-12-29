@@ -1,14 +1,67 @@
+import { Box, Typography, IconButton, Link } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import DescriptionIcon from "@mui/icons-material/Description"; // For Resume Icon
+
 const Contact = () => {
   return (
-    <section id="contact" className="bg-lightBg py-16 px-8 text-center">
-      <h2 className="text-3xl text-primary font-semibold mb-6">Get In Touch</h2>
-      <a
-        href="mailto:reachpanchajanya@gmail.com"
-        className="mt-8 inline-block bg-primary text-darkBg px-6 py-3 rounded-md hover:bg-opacity-80"
-      >
-        Say Hello
-      </a>
-    </section>
+    <Box
+      id="contact"
+      component="footer"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        py: 3,
+        px: 2,
+        mt: 4,
+        backgroundColor: "background.paper",
+        textAlign: "center",
+      }}
+    >
+      <Typography variant="body1" sx={{ mb: 2 }}>
+        Connect with me:
+      </Typography>
+      <Box sx={{ display: "flex", gap: 2 }}>
+        {/* LinkedIn Icon */}
+        <IconButton
+          component={Link}
+          href="https://www.linkedin.com/in/panchajanyamysarla/"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+        >
+          <LinkedInIcon />
+        </IconButton>
+
+        {/* GitHub Icon */}
+        <IconButton
+          component={Link}
+          href="https://github.com/PanchajanyaMysarla"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+        >
+          <GitHubIcon />
+        </IconButton>
+
+        {/* Resume Icon */}
+        <IconButton
+          component={Link}
+          href="https://your-resume-url.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+        >
+          <DescriptionIcon />
+        </IconButton>
+      </Box>
+      <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+        © {new Date().getFullYear()} Panchajanya Mysarla. Built with React. All
+        rights reserved.
+      </Typography>
+    </Box>
   );
 };
 
