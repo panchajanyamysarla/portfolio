@@ -38,7 +38,7 @@ const Contact = () => {
         {/* GitHub Icon */}
         <IconButton
           component={Link}
-          href="https://github.com/PanchajanyaMysarla"
+          href="https://github.com/panchajanyamysarla"
           target="_blank"
           rel="noopener noreferrer"
           color="primary"
